@@ -1,0 +1,49 @@
+.tabBox-main{
+  width: 100%;
+  height: calc(100% - 90rpx);
+  height: -webkit-calc(100% - 90rpx);
+}
+ .tab-h {
+  position: relative;
+  height: 80rpx;
+  width: 100%;
+  line-height: 80rpx;
+  background: #f9f9f9;
+  font-size: 16px;
+  white-space: nowrap;
+  z-index: 98;
+}
+
+.tab-item {
+  position: relative; 
+  display: inline-block; 
+  padding: 0 30rpx;
+  z-index: 999;
+}
+
+.tab-item.active {
+  color: #0ae;
+  position: relative;
+}
+
+.tab-item.active:after {
+  content: "";
+  display: block;
+  height: 6rpx;
+  width: 66%;
+  background: #0ae;
+  position: absolute;
+  bottom: 8rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 16rpx;
+}
+.tab-content {
+  height: calc(100% - 80rpx);
+  height: -webkit-calc(100% - 80rpx);
+}
+
+.scoll-h {
+  position: relative;
+  height: 100%;
+} 

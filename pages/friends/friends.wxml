@@ -1,0 +1,14 @@
+<!--pages/friends/friends.wxml-->
+<view>
+  <view class='friends-contain' wx:for="{{friendArrays}}" data-index="{{index}}" bindtap='chatWithFriend'>
+    <text class='friends-context'> {{item.sessionId}}</text>
+  </view>
+
+  <view>
+    <form class='addFriends' bindsubmit='addFriends'>
+      <input type='text' class='search' name='account' value='{{searchContent}}'></input>
+      <button class='add' form-type='submit'>添加</button>
+    </form>
+
+  </view>
+</view>

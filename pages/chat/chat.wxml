@@ -1,0 +1,29 @@
+<!--pages/chat/chat.wxml-->
+<view class="container">
+  <view class="msgs-wrapper">
+    <view class="msgs" wx:for="{{msgs}}">
+      <view class="msg-item">
+        <text class="nickname">{{item.fromAccountNick}}:</text>
+        <rich-text style='width:50px' nodes='{{item.content}}' bindtap='play' data-content='{{item.content}}'></rich-text>
+      </view>
+    </view>
+  </view>
+
+  <view class="input-section">
+    <input value="{{inputValue}}" placeholder="请输入内容" bindinput="bindKeyInput" bindconfirm="sendMessage" confirm-type="send" />
+    <!-- 发送图片 -->
+    <image class='send' src='../../assets/images/send-pic.png' bindtap="moreType"></image>
+    <!-- 视频聊天 -->
+    <image class='video' src='../../assets/images/video-chat.png' bindtap="videoChat"></image>
+    <!-- 发送语音 -->
+    <!-- 长按，松手后发送语音 -->
+    <image class='send-voice' src='../../assets/images/send-voice.png' bindtouchstart='touchdown' bindtouchend='touchup'></image>
+  </view>
+
+  <canvas canvas-id='firstCanvas' style='width:{{canvasW}}px;height:{{canvasH}}px;position:absolute;left:-10000px;top:-10000px;'></canvas>
+
+  <!-- 显示图片的遮罩层 -->
+  <view class='showPic' hidden='{{isShow}}' bindtap='isClose'>
+     <image src='{{picSrc}}'></image> 
+  </view>
+</view>

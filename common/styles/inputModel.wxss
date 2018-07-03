@@ -1,0 +1,99 @@
+.model{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.5);
+  /* overflow: hidden; */
+  z-index: 9;
+}
+.model_content{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 10;
+  width: 80%;
+  height: 360rpx;
+  padding: 40rpx;
+  background: #fff;
+  color: #000;
+  border-radius: 10rpx;
+  box-shadow: 0 0 8px 0 rgba(0,0,0,0.7)
+}
+.model_title{
+  display: block;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 32rpx;
+}
+.input_area{
+  position: relative;
+  height:160rpx;
+  line-height: 160rpx;
+}
+.input_area::before{
+  content: '';
+  position: absolute;
+  bottom: 50rpx;
+  display: inline-block;
+  height: 12rpx;
+  border-left: 1px solid #999;
+}
+.input_area::after{
+  content: '';
+  position: absolute;
+  bottom: 50rpx;
+  right: 0;
+  display: inline-block;
+  height: 12rpx;
+  border-left: 1px solid #999;
+}
+.input_area>input{
+  position: absolute;
+  bottom: 50rpx;
+  display: inline-block;
+  width: 100%;
+  line-height: 48rpx;
+  padding: 0 0 0 20rpx;
+  border-bottom: 1px solid #999; 
+  font-size: 32rpx;
+}
+
+.model_btns{
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: right;
+}
+button::before,
+button::after{
+  content: "";
+  border: none;
+}
+.model_cancel{
+  display: inline-block;
+  width: 160rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  font-size: 32rpx;
+  color: #C2C2C2;
+  background: none;
+  border: none;
+}
+.model_sure{
+  display: inline-block;
+  width: 160rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  font-size: 32rpx;
+  color: #09e;
+  background: none;
+  border: none;
+}
